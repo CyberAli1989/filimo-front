@@ -1,0 +1,368 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filimo</title>
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-dark-200 text-white">
+<nav class="fixed z-50 top-0 right-0 left-0 bg-dark-900 bg-opacity-85 border-gray-200 text-sm flex items-center w-full justify-around">
+    <div class="flex flex-wrap items-center gap-5 p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/filimo/fa-filimo-dark-logo.svg"
+                 class="h-8" alt="filimo_logo"/>
+        </a>
+        <button data-collapse-toggle="navbar-multi-level" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-multi-level" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4
+            border border-gray-100 rounded-lg md:space-x-8
+            rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+            >
+                <li>
+                    <a href="#"
+                       class="block text-white py-2 px-3 hover:text-orange-n-100 rounded md:bg-transparent md:p-0"
+                       aria-current="page">
+                        <i class="fa-solid fa-fire text-orange-n-100"></i>
+                        <span>
+                            فیلیموتور
+                        </span>
+                    </a>
+                </li>
+                <li class="flex gap-8" id="menu_items">
+
+                </li>
+                <li>
+                    <a
+                            class="block text-white py-2 px-3 hover:text-orange-n-100 rounded md:bg-transparent md:p-0"
+                            href="">
+                        <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                        جست و جو
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="flex items-center justify-center gap-5">
+        <button class="bg-green-n-300 px-3 py-2 text-sm text-white font-bold rounded">
+            خرید اشتراک
+        </button>
+        <button class="bg-dark-50 px-3 py-2 text-sm text-white font-bold rounded">
+            ورود
+        </button>
+    </div>
+</nav>
+<section id="header" class="relative z-10">
+    <div class="absolute right-0 bottom-0 top-0 left-0 flex items-center bg-dark-100 bg-opacity-35 z-20 px-10">
+        <div class="flex flex-col justify-end w-full relative z-20 h-5/6 select-none ">
+            <p class="text-sm text-orange-n-100 font-bold text-center mx-auto">با فیلیمو بی وقفه فیلم ببین</p>
+            <h1 class="text-3xl text-white font-bold text-center mt-5">کنترل همیشه دست توست!</h1>
+            <ul class="flex justify-around mt-5 text-font-100">
+                <li>
+                    <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
+                    90 هزار اپیزود فیلم و سریال برای تماشا داری
+                </li>
+                <li>
+                    <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
+                    می تونی دانلود کنی بعد بدونه اینترنت تماشا کنی
+                </li>
+                <li>
+                    <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
+                    می‌تونی یک عضو، مخصوص تماشای کودک بسازی
+                </li>
+            </ul>
+            <button class="p-5 bg-green-n-300 w-2/12 rounded mt-20 mx-auto text-white font-bold text-sm">
+                <i class="fa-solid fa-ticket"></i>
+                خرید اشتراک و تماشا
+            </button>
+            <p class="text-center mt-2 text-sm text-font-100">
+                <i class="fa-solid fa-gift"></i>
+                تخفیف ویژه برای کاربران جدید
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 bottom-0 left-0 bg-dark-gradiant-overlay1">
+        </div>
+        <div class="absolute top-0 right-0 bottom-0 left-0 bg-dark-gradiant-overlay2">
+        </div>
+    </div>
+    <div class="swiper main-swiper">
+        <div class="swiper-wrapper" id="main_slider">
+
+        </div>
+    </div>
+
+</section>
+
+<section id="popular" class="relative">
+    <div class="flex gap-5 px-10">
+        <h1 class="font-bold text-2xl">محبوب ترین های فیلیمو</h1>
+        <div class="border border-gray-500 rounded-xl text-center overflow-hidden flex justify-around gap-0.5">
+            <button class="bg-dark-50 w-16 h-8 rounded-full">فیلم</button>
+            <button class="w-16 h-8">سریال</button>
+        </div>
+    </div>
+    <div id="popular_movies" class="flex max-w-7xl mt-10 mx-auto gap-10 justify-between relative z-20">
+
+    </div>
+    <div id="popular_movies_details" class="flex max-w-7xl mt-10 mx-auto gap-10 justify-between relative z-20" >
+
+    </div>
+</section>
+<script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+<script src="../node_modules/axios/dist/axios.min.js"></script>
+<script>
+    /**
+     * Axios Configuration
+     */
+        // const baseURL = 'https://film.devphonix.com/api';
+    const baseURL = 'http://127.0.0.1:8000/api';
+    const AxiosClient = axios.create({
+        baseURL: baseURL,
+    });
+
+    /**
+     * Fetch Data Function
+     */
+    async function fetchData() {
+        try {
+            const response = await AxiosClient.get('v1/web');
+            if (response.data.success) {
+                return response.data.data;
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+        return null;
+    }
+
+    /**
+     * Load Data on Window Load
+     */
+    window.addEventListener('load', async () => {
+        const data = await fetchData();
+        if (data) {
+            window.webData = data;
+            createNavigationMenu(data?.categories);
+            createSlider(data?.slider)
+            createPopularMovies(data?.popular_movies);
+        } else {
+            console.error('Failed to fetch data.');
+        }
+    });
+
+    function createNavigationMenu(data) {
+        const navList = document.querySelector('#menu_items');
+        data.forEach(item => {
+            const li = document.createElement('li');
+            if (item.children.length > 0) {
+                const button = document.createElement('button');
+                const span = document.createElement('span');
+                span.textContent = item.title
+                button.dataset.dropdownToggle = 'dropDown' + item.id;
+                button.dataset.dropdownTrigger = 'hover';
+                button.classList.add('flex', 'gap-2', 'items-center', 'justify-between', 'w-full', 'py-2', 'px-3', 'text-white', 'hover:text-amber-500', 'hover:bg-gray-100', 'md:hover:bg-transparent', 'md:border-0', 'md:p-0', 'md:w-auto', 'dark:text-white', 'md:dark:hover:text-blue-500', 'dark:focus:text-white', 'dark:hover:bg-gray-700', 'md:dark:hover:bg-transparent');
+                li.appendChild(button);
+                const icon = document.createElement('i');
+                icon.classList.add('fa-solid', 'fa-angle-down', 'text-white');
+                icon.innerHTML = '';
+                button.appendChild(span);
+                button.appendChild(icon);
+                li.classList.add('relative')
+                const div = document.createElement('div');
+                div.id = 'dropDown' + item.id;
+                div.classList.add('z-10', 'hidden', 'absolute', 'top-full', 'font-normal', 'bg-white', 'divide-y', 'divide-gray-100', 'rounded-lg', 'shadow', 'w-44');
+                const ul = document.createElement('ul');
+                ul.classList.add('py-2', 'text-sm', 'text-white', 'bg-dark-200', 'w-full', 'flex', 'flex-wrap', 'gap-.5', 'text-center', 'shadow-xl');
+                item.children.forEach(child => {
+                    const childLi = document.createElement('li');
+                    const childA = document.createElement('a');
+                    childA.classList.add('hover:text-amber-500')
+                    childA.href = '#';
+                    childA.textContent = child.title;
+                    childA.classList.add('block', 'px-4', 'py-2');
+                    childLi.appendChild(childA);
+                    ul.appendChild(childLi);
+                });
+                div.appendChild(ul);
+                li.appendChild(div);
+
+                // Add event listeners to toggle dropdown visibility
+                button.addEventListener('mouseenter', () => {
+                    div.classList.remove('hidden');
+                });
+                button.addEventListener('mouseleave', () => {
+                    div.classList.add('hidden');
+                });
+                div.addEventListener('mouseenter', () => {
+                    div.classList.remove('hidden');
+                });
+                div.addEventListener('mouseleave', () => {
+                    div.classList.add('hidden');
+                });
+            } else {
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = item.title;
+                a.classList.add('block', 'py-2', 'px-3', 'text-white', 'rounded', 'hover:text-amber-500', 'md:p-0', 'md:w-auto', 'dark:text-white', 'md:dark:hover:text-blue-500', 'dark:hover:bg-gray-700', 'dark:hover:text-white', 'md:dark:hover:bg-transparent');
+                li.appendChild(a);
+            }
+            navList.appendChild(li);
+        });
+    }
+
+    var swiper = new Swiper(".main-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        draggable: false,
+        allowTouchMove: false
+    });
+    const getImageWidth = (imageName) => {
+        const regex = /(\d+)_(\d+)\.webp$/;
+        return imageName?.map(url => {
+            const match = url.match(regex);
+            return `${url} ${match[1]}w `
+        });
+    };
+
+    function createSlider(data) {
+        const slider = document.querySelector('#main_slider');
+        data.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.classList.add('swiper-slide', 'h-screen')
+            const img = document.createElement('img')
+            img.src = item.image.responsive_images.svg
+            img.srcset = getImageWidth(item.image.responsive_images.urls)
+            img.classList.add('w-full', 'object-cover', 'h-full')
+            slider.appendChild(div);
+            div.appendChild(img);
+        })
+    }
+
+    function setActive(item) {
+        document.querySelectorAll("#popular_movies div").forEach((div) => {
+            div.classList.remove('border', 'transform', 'scale-110', 'p-2', 'transition', 'duration-75')
+        })
+        document.querySelector(`#popular_movies div[data-id="${item.id}"]`).classList.add('border', 'transform', 'scale-110', 'p-2', 'transition', 'duration-75');
+        const detailsContainer = document.querySelector('#popular_movies_details');
+        while (detailsContainer.firstChild) {
+            detailsContainer.removeChild(detailsContainer.firstChild);
+        }
+        const div = document.createElement('div');
+        div.classList.add('w-full' , 'relative')
+        const h2 = document.createElement('h2');
+        h2.textContent = item.title
+        h2.classList.add('font-bold')
+        const h3 = document.createElement('h3');
+        h3.textContent = 'کارگردان: ' + item.director.name + item.director.last_name
+        h3.classList.add('mt-10', 'mb-5', 'text-sm', 'text-font-100')
+        const ul = document.createElement('ul');
+        ul.classList.add('mt-5', 'text-font-100')
+        item.categories.forEach((category) => {
+            const li = document.createElement('li');
+            li.textContent = category.title
+            li.classList.add('bg-dark-50', 'w-fit', 'p-1', 'rounded-full', 'text-small')
+            ul.appendChild(li);
+        })
+        const p = document.createElement('p');
+        p.textContent = item.description;
+        p.classList.add('mt-3', 'text-sm')
+        const swiperContainer = document.createElement('div');
+        swiperContainer.classList.add('swiper', 'episodes', 'mt-20', 'mb-10')
+        const swiperWrapper = document.createElement('div');
+        swiperWrapper.classList.add('swiper-wrapper');
+        item.episodes.forEach((data) => {
+            const swiperSlide = document.createElement('div');
+            swiperSlide.classList.add('swiper-slide');
+            const box = document.createElement('div');
+            box.classList.add('w-full', 'overflow-hidden', 'rounded-xl')
+            box.style.height = '150px'
+            const img = document.createElement('img');
+            img.classList.add('w-full', 'object-cover', 'h-3/4')
+            if (!data.free) {
+                img.classList.add('blur-sm')
+                const lock = document.createElement('i');
+                lock.classList.add('fa-solid', 'fa-lock' , 'absolute' , 'left-0' , 'right-0' , 'top-0' , 'bottom-0' , 'flex' , 'items-center' , 'justify-center' , 'z-10' , 'text-xl')
+                box.classList.add('relative')
+                box.appendChild(lock);
+            }
+            img.src = data.image.responsive_images.svg
+            img.srcset = getImageWidth(data.image.responsive_images.urls)
+            const title = document.createElement('p');
+            title.textContent = data.title
+            title.classList.add('mt-2')
+            box.appendChild(img)
+            box.appendChild(title)
+            swiperSlide.appendChild(box);
+            swiperWrapper.appendChild(swiperSlide)
+        });
+        swiperContainer.appendChild(swiperWrapper);
+        const banner = document.createElement('img');
+        banner.src = item.banner.responsive_images.svg;
+        banner.srcset = getImageWidth(item.banner.responsive_images.urls);
+        banner.classList.add('absolute' , 'top-0' , 'bottom-0' , 'right-0' , 'left-0' , 'object-cover' , 'w-full' , 'h-full')
+        setTimeout(() => {
+            var swiper = new Swiper(".episodes", {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            });
+        }, 600)
+        const parent = document.querySelector('#popular').appendChild(banner)
+        div.appendChild(h2)
+        div.appendChild(h3)
+        div.appendChild(ul)
+        div.appendChild(p)
+        div.appendChild(swiperContainer)
+        detailsContainer.appendChild(div)
+
+    }
+
+
+    function createPopularMovies(data) {
+        const slider = document.querySelector('#popular_movies');
+        console.log(data);
+        webData.popular_movies.forEach((item, index) => {
+            if (index < 6) {
+                const div = document.createElement('div');
+                div.classList.add('w-fit', 'rounded', 'overflow-hidden')
+                div.dataset.id = item.id
+                div.addEventListener('click', () => setActive(item))
+                if (index === 0) {
+                    setTimeout(() => {
+                        div.click();
+                    }, 600)
+                }
+                const img = document.createElement('img')
+                img.src = item.cover.responsive_images.svg
+                img.srcset = getImageWidth(item.cover.responsive_images.urls)
+                img.classList.add('w-full', 'object-cover', 'h-full')
+                slider.appendChild(div);
+                div.appendChild(img);
+
+            }
+        })
+    }
+
+</script>
+</body>
+</html>
