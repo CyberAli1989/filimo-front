@@ -13,3 +13,23 @@ body {
 .bg-dark-gradiant-overlay2 {
     background: radial-gradient(130% 44% at 41% 40%, rgba(0, 0, 0, 0) 0, #151515 100%);
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.blue-gradient {
+    position: relative;
+    background: -webkit-linear-gradient(245deg, #05c3ff 0, #151515 40%) !important;
+}
+.blue-gradient:before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
