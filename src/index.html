@@ -35,7 +35,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="flex gap-4" id="menu_items">
+                <li class="flex gap-4" id="mobileNav">
 
                 </li>
             </ul>
@@ -122,7 +122,7 @@
                     می‌تونی یک عضو، مخصوص تماشای کودک بسازی
                 </li>
             </ul>
-            <button class="p-5 bg-green-n-300 w-8/12 rounded mt-20 mx-auto text-white font-bold text-sm">
+            <button class="p-5 bg-green-n-300 md:w-3/12 w-8/12 rounded mt-20 mx-auto text-white font-bold text-sm">
                 <i class="fa-solid fa-ticket"></i>
                 خرید اشتراک و تماشا
             </button>
@@ -160,7 +160,7 @@
     </div>
 </section>
 <section id="how_to_watch">
-    <div class="flex flex-wrap mt-16 max-w-6xl mx-auto justify-around items-center">
+    <div class="flex md:flex-row flex-wrap md:flex-nowrap mt-16 max-w-6xl mx-auto justify-around items-center">
         <img class="md:mb-0 mb-6"
              src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/deviceYaghi.png"
              alt="">
@@ -620,6 +620,7 @@
         if (data) {
             window.webData = data;
             createNavigationMenu(data?.categories);
+            createMobileNavigationMenu(data?.categories);
             createSlider(data?.slider)
             createPopularMovies(data?.popular_movies);
             createFreeMovies(data?.free_movies);
@@ -631,6 +632,65 @@
 
     function createNavigationMenu(data) {
         const navList = document.querySelector('#menu_items');
+        data.forEach(item => {
+            const li = document.createElement('li');
+            if (item.children.length > 0) {
+                const button = document.createElement('button');
+                const span = document.createElement('span');
+                span.textContent = item.title
+                button.dataset.dropdownToggle = 'dropDown' + item.id;
+                button.dataset.dropdownTrigger = 'hover';
+                button.classList.add('flex', 'gap-2', 'items-center', 'justify-between', 'w-full', 'py-2', 'px-3', 'text-white', 'hover:text-amber-500', 'hover:bg-gray-100', 'md:hover:bg-transparent', 'md:border-0', 'md:p-0', 'md:w-auto', 'dark:text-white', 'md:dark:hover:text-blue-500', 'dark:focus:text-white', 'dark:hover:bg-gray-700', 'md:dark:hover:bg-transparent');
+                li.appendChild(button);
+                const icon = document.createElement('i');
+                icon.classList.add('fa-solid', 'fa-angle-down', 'text-white');
+                icon.innerHTML = '';
+                button.appendChild(span);
+                button.appendChild(icon);
+                li.classList.add('relative')
+                const div = document.createElement('div');
+                div.id = 'dropDown' + item.id;
+                div.classList.add('z-10', 'hidden', 'absolute', 'top-full', 'font-normal', 'bg-white', 'divide-y', 'divide-gray-100', 'rounded-lg', 'shadow', 'w-44');
+                const ul = document.createElement('ul');
+                ul.classList.add('py-2', 'text-sm', 'text-white', 'bg-dark-200', 'w-full', 'flex', 'flex-wrap', 'gap-.5', 'text-center', 'shadow-xl');
+                item.children.forEach(child => {
+                    const childLi = document.createElement('li');
+                    const childA = document.createElement('a');
+                    childA.classList.add('hover:text-amber-500')
+                    childA.href = '#';
+                    childA.textContent = child.title;
+                    childA.classList.add('block', 'px-4', 'py-2');
+                    childLi.appendChild(childA);
+                    ul.appendChild(childLi);
+                });
+                div.appendChild(ul);
+                li.appendChild(div);
+
+                // Add event listeners to toggle dropdown visibility
+                button.addEventListener('mouseenter', () => {
+                    div.classList.remove('hidden');
+                });
+                button.addEventListener('mouseleave', () => {
+                    div.classList.add('hidden');
+                });
+                div.addEventListener('mouseenter', () => {
+                    div.classList.remove('hidden');
+                });
+                div.addEventListener('mouseleave', () => {
+                    div.classList.add('hidden');
+                });
+            } else {
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = item.title;
+                a.classList.add('block', 'py-2', 'px-3', 'text-white', 'rounded', 'hover:text-amber-500', 'md:p-0', 'md:w-auto', 'dark:text-white', 'md:dark:hover:text-blue-500', 'dark:hover:bg-gray-700', 'dark:hover:text-white', 'md:dark:hover:bg-transparent');
+                li.appendChild(a);
+            }
+            navList.appendChild(li);
+        });
+    }
+    function createMobileNavigationMenu(data) {
+        const navList = document.querySelector('#mobileNav');
         data.forEach(item => {
             const li = document.createElement('li');
             if (item.children.length > 0) {
@@ -720,7 +780,7 @@
                 spaceBetween: 40,
             },
             1024: {
-                slidesPerView: 6,
+                slidesPerView: 3,
                 spaceBetween: 50,
             },
         },
