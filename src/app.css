@@ -16,14 +16,15 @@ body {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .blue-gradient {
     position: relative;
     background: -webkit-linear-gradient(245deg, #05c3ff 0, #151515 40%) !important;
 }
-.blue-gradient:before{
+
+.blue-gradient:before {
     content: "";
     position: absolute;
     right: 0;
@@ -31,5 +32,8 @@ body {
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.2);
+}
 
+.green-gradiant {
+    background: radial-gradient(100% 410.68% at 100% 100%,rgba(0,0,0,0) 0,rgba(0,29,13,.54) 53.55%,rgba(0,0,0,0) 100%);
 }

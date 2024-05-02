@@ -12,6 +12,44 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-dark-200 text-white">
+<nav class="z-50 top-0
+ right-0 left-0 bg-dark-900 bg-opacity-85
+  border-gray-200 text-sm flex flex-row md:hidden justify-between px-3 items-start w-full">
+    <div class="flex flex-wrap flex-col items-start w-6/12">
+        <a href="#" class="flex items-center mt-6">
+            <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/filimo/fa-filimo-dark-logo.svg"
+                 class="h-8" alt="filimo_logo"/>
+        </a>
+        <div class="w-[440px] mt-6 overflow-x-auto">
+            <ul class="flex flex-row overflow-x-auto items-center rounded"
+            >
+                <li>
+                    <a href="#"
+                       class="
+                       flex items-center gap-3 py-2 px-3 text-white rounded md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent
+                        hover:text-orange-n-100"
+                       aria-current="page">
+                        <i class="fa-solid fa-fire text-orange-n-100"></i>
+                        <span>
+                            فیلیموتور
+                        </span>
+                    </a>
+                </li>
+                <li class="flex gap-4" id="menu_items">
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="flex items-center justify-center gap-5 mt-6">
+        <button class="bg-green-n-300 px-4 text-sm text-white font-bold rounded">
+            خرید اشتراک
+        </button>
+        <button class="bg-dark-50 px-3 py-2.5 text-sm text-white font-bold rounded">
+            ورود
+        </button>
+    </div>
+</nav>
 <nav class="fixed z-50 top-0 right-0 left-0 bg-dark-900 bg-opacity-85 border-gray-200 text-sm hidden md:flex items-center w-full justify-around">
     <div class="flex flex-wrap items-center gap-5 p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -66,11 +104,11 @@
     </div>
 </nav>
 <section id="header" class="relative z-10">
-    <div class="absolute right-0 bottom-0 top-0 left-0 flex items-center bg-dark-100 bg-opacity-35 z-20 px-10">
-        <div class="flex flex-col justify-end w-full relative z-20 h-5/6 select-none ">
+    <div class="absolute right-0 bottom-0 top-0 left-0 flex items-center bg-dark-100 bg-opacity-35 z-20 md:px-10 px-3">
+        <div class="flex flex-col justify-end w-full relative z-20 h-5/6 select-none">
             <p class="text-sm text-orange-n-100 font-bold text-center mx-auto">با فیلیمو بی وقفه فیلم ببین</p>
-            <h1 class="text-3xl text-white font-bold text-center mt-5">کنترل همیشه دست توست!</h1>
-            <ul class="flex justify-around mt-5 text-font-100">
+            <h1 class="md:text-3xl text-xl text-white font-bold text-center mt-5">کنترل همیشه دست توست!</h1>
+            <ul class="flex md:flex-row flex-col gap-5 md:gap-0 justify-around mt-5 text-font-100 text-sm">
                 <li>
                     <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
                     90 هزار اپیزود فیلم و سریال برای تماشا داری
@@ -84,7 +122,7 @@
                     می‌تونی یک عضو، مخصوص تماشای کودک بسازی
                 </li>
             </ul>
-            <button class="p-5 bg-green-n-300 w-2/12 rounded mt-20 mx-auto text-white font-bold text-sm">
+            <button class="p-5 bg-green-n-300 w-8/12 rounded mt-20 mx-auto text-white font-bold text-sm">
                 <i class="fa-solid fa-ticket"></i>
                 خرید اشتراک و تماشا
             </button>
@@ -113,18 +151,20 @@
             <button class="w-16 h-8">سریال</button>
         </div>
     </div>
-    <div id="popular_movies" class="flex max-w-7xl mt-10 mx-auto gap-10 justify-between relative z-20">
+    <div id="popular_movies" class="flex md:max-w-7xl mt-10 mx-auto md:gap-10 gap-2 justify-between relative z-20">
 
     </div>
-    <div id="popular_movies_details" class="flex max-w-7xl mt-10 mx-auto gap-10 justify-between relative z-20">
+    <div id="popular_movies_details"
+         class="flex md:max-w-7xl mt-10 mx-auto md:gap-10 gap-2 justify-between relative px-3 md:px-0 z-20">
 
     </div>
 </section>
 <section id="how_to_watch">
-    <div class="flex mt-16 max-w-6xl mx-auto justify-around items-center">
-        <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/deviceYaghi.png"
+    <div class="flex flex-wrap mt-16 max-w-6xl mx-auto justify-around items-center">
+        <img class="md:mb-0 mb-6"
+             src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/deviceYaghi.png"
              alt="">
-        <div class="flex flex-col justify-center">
+        <div class="flex flex-col justify-center md:px-0 px-3">
             <h2 class="font-bold text-2xl">تماشای فیلیمو با همه ی دستگاه ها</h2>
             <p class="my-5 text-font-100">
                 می‌توانید فیلیمو را به صورت هم‌زمان روی 3 دستگاه مختلف مثل موبایل، تبلت، لپ‌تاپ، تلویزیون و... تماشا
@@ -175,8 +215,8 @@
     </div>
 </section>
 <section id="watch" class="bg-dark-900">
-    <div class="flex mt-16 items-center justify-between">
-        <div class="flex justify-center flex-col w-4/12 mx-auto h-full my-16">
+    <div class="flex flex-wrap flex-col md:flex-row md:mt-16 mt-10 items-center justify-between">
+        <div class="flex justify-center flex-col md:w-4/12 md:px-0 px-3 mx-auto h-full my-16">
             <h2 class="font-bold">
                 چطور با تلویزیون، فیلیمو تماشا کنم؟
             </h2>
@@ -218,12 +258,12 @@
                 </li>
             </ul>
         </div>
-        <img class="w-6/12"
+        <img class="md:w-6/12"
              src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/TVBG.png" alt="">
     </div>
 </section>
 <section id="free_movies">
-    <div class="max-w-7xl mx-auto mt-16">
+    <div class="max-w-7xl mx-auto md:mt-16 mt-10">
         <h3 class="text-xl font-bold mb-10">فیلم های رایگان</h3>
         <div class="swiper free_movies">
             <div class="swiper-wrapper" id="free_movies_container">
@@ -233,11 +273,11 @@
     </div>
 </section>
 <section id="kids" class="blue-gradient w-full h-full">
-    <div class="flex mt-20 max-w-7xl mx-auto justify-center gap-20 relative z-20">
-        <img class="w-3/12"
+    <div class="flex md:flex-row flex-col-reverse md:px-0 px-3 md:mt-20 mt-10 max-w-7xl mx-auto justify-center md:gap-20 gap-5 relative z-20">
+        <img class="md:w-3/12"
              src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/bg-kids.png"
              alt="">
-        <div class="flex flex-col w-5/12 justify-center ">
+        <div class="flex flex-col md:w-5/12 justify-center ">
             <h3 class="text-xl font-bold mb-5">
                 دنیایی متنوع از فیلم و کارتون‌های کودکانه
             </h3>
@@ -261,12 +301,13 @@
     </div>
 </section>
 <section class="relative" id="cenema">
-    <img class="absolute w-full h-full object-cover top-0 right-0 left-0 bottom-0 z-10" src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/bg-cinama.png" alt="">
-    <div class="max-w-7xl mx-auto mt-10 relative z-20">
-        <h3 class="text-center font-bold text-xl">
+    <img class="absolute w-full h-full object-cover top-0 right-0 left-0 bottom-0 z-10"
+         src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/nosub-v_new/bg-cinama.png" alt="">
+    <div class="max-w-7xl mx-auto relative z-20">
+        <h3 class="text-center md:mt-0 pt-10 font-bold text-xl">
             سینما آنلاین فیلیمو
         </h3>
-        <ul class="flex justify-around my-8 text-font-100 text-sm">
+        <ul class="flex md:flex-row flex-col md:gap-0 gap-5 md:px-0 px-3 justify-around my-8 text-font-100 text-sm">
             <li>
                 <i class="fa-solid fa-check bg-green-n-300 rounded-full me-2 p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
                 فیلم‌های روز سینمای ایران
@@ -285,6 +326,264 @@
         </div>
     </div>
 </section>
+<section id="comments">
+    <div class="max-w-7xl mx-auto mt-10 overflow-hidden py-16">
+        <div class="swiper overflow-visible relative comment_swiper">
+            <div class="swiper-wrapper overflow-y-visible" id="comment_swiper">
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            فیلیمو عالی من از فیلیمو رازی هستم❤❤😍🤩😘❤🍓
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            خیلی خوب بود من راحت فیِلمی را که دوست داشتمو دانلود میکردم وغیر از دانلود راحت میتونستم
+                            فیلموببینم درهرحال راضیم ازاین برنامه.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            فیلیمو عالی من از فیلیمو رازی هستم❤❤😍🤩😘❤🍓
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            خیلی خوب بود من راحت فیِلمی را که دوست داشتمو دانلود میکردم وغیر از دانلود راحت میتونستم
+                            فیلموببینم درهرحال راضیم ازاین برنامه.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            فیلیمو عالی من از فیلیمو رازی هستم❤❤😍🤩😘❤🍓
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            خیلی خوب بود من راحت فیِلمی را که دوست داشتمو دانلود میکردم وغیر از دانلود راحت میتونستم
+                            فیلموببینم درهرحال راضیم ازاین برنامه.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            فیلیمو عالی من از فیلیمو رازی هستم❤❤😍🤩😘❤🍓
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide w-full items-center h-[190px]">
+                    <div class="flex flex-col border border-gray-500 w-full h-[190px] rounded-xl shadow bg-dark-150 p-2">
+                        <div class="flex justify-between gap-5">
+                            <div class="flex justify-between gap-3 items-center">
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/1.png"
+                                     alt="">
+                                <span class="text-font-100">
+                                user name
+                            </span>
+                            </div>
+                            <div>
+                                <img src="https://www.filimo.com/assets/web/ui/img-ugnSfCQdq1MdoMws3NbA/campaigns/big-screen_v2/virgol.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <p class="mt-8 text-sm">
+                            خیلی خوب بود من راحت فیِلمی را که دوست داشتمو دانلود میکردم وغیر از دانلود راحت میتونستم
+                            فیلموببینم درهرحال راضیم ازاین برنامه.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute w-[120px] mx-0.5 bg-red-500 -top-7 left-5 me-auto ">
+                <div class="swiper-button-next text-white rounded-full bg-dark-900 w-12 h-12"></div>
+                <div class="swiper-button-prev text-white absolute left-0 rounded-full bg-dark-900 w-12 h-12"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="faq" class="bg-dark-100 py-24">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center">
+            <h3 class="font-bold">سوالات متداول</h3>
+            <p class="text-sm text-font-100 mt-4">سوال شایع دیگر کاربران شاید برای شما پیش امده باشد</p>
+        </div>
+        <div class="mt-16" id="faqItems">
+            <div class="flex mb-5 bg-dark-150 shadow-2xl flex-col gap-10 rounded-xl max-w-2xl mx-auto h-fit overflow-hidden border border-gray-500 p-3 items-center">
+                <div class="flex justify-between w-full h-full items-center">
+                    <h1> آیا می‌توانم فیلم‌های موجود در فیلیمو را دانلود کنم؟</h1>
+                    <i data-id="1" class="fa-solid transition duration-75 fa-xmark text-orange-n-100 rotate-45"></i>
+                </div>
+                <p data-p="1" class="text-font-100 transition duration-75 text-sm text-justify h-0 opacity-0 hidden">
+                    بله، شما می‌توانید همه فیلم‌ و سریال‌های فیلیمو را داخل خود اپلیکیشن فیلیمو دانلود کنید و برای
+                    زمان‌هایی که اینترنت ندارید یا در سفر، هواپیما و قطار آ‌ن‌ها را تماشا کنید. برای دانلود هم از طریق
+                    رایانه و هم از طریق خود اپلیکیشن فیلیمو می‌توانید اقدام‌کنید. برای جزییات بیشتر می‌توانید فیلم‌های
+                    آموزشی مربوط به دانلود از طریق سایت و دانلود از طریق اپلیکیشن را تماشا کنید.
+                </p>
+            </div>
+            <div class="flex mb-5 bg-dark-150 shadow-2xl flex-col gap-10 rounded-xl max-w-2xl mx-auto h-fit overflow-hidden border border-gray-500 p-3 items-center">
+                <div class="flex justify-between w-full h-full items-center">
+                    <h1> آیا می‌توانم فیلم‌های موجود در فیلیمو را دانلود کنم؟</h1>
+                    <i data-id="2" class="fa-solid transition duration-75 fa-xmark text-orange-n-100 rotate-45"></i>
+                </div>
+                <p data-p="2" class="text-font-100 transition duration-75 text-sm text-justify h-0 opacity-0 hidden">
+                    بله، شما می‌توانید همه فیلم‌ و سریال‌های فیلیمو را داخل خود اپلیکیشن فیلیمو دانلود کنید و برای
+                    زمان‌هایی که اینترنت ندارید یا در سفر، هواپیما و قطار آ‌ن‌ها را تماشا کنید. برای دانلود هم از طریق
+                    رایانه و هم از طریق خود اپلیکیشن فیلیمو می‌توانید اقدام‌کنید. برای جزییات بیشتر می‌توانید فیلم‌های
+                    آموزشی مربوط به دانلود از طریق سایت و دانلود از طریق اپلیکیشن را تماشا کنید.
+                </p>
+            </div>
+            <div class="flex mb-5 bg-dark-150 shadow-2xl flex-col gap-10 rounded-xl max-w-2xl mx-auto h-fit overflow-hidden border border-gray-500 p-3 items-center">
+                <div class="flex justify-between w-full h-full items-center">
+                    <h1> آیا می‌توانم فیلم‌های موجود در فیلیمو را دانلود کنم؟</h1>
+                    <i data-id="2" class="fa-solid transition duration-75 fa-xmark text-orange-n-100 rotate-45"></i>
+                </div>
+                <p data-p="2" class="text-font-100 transition duration-75 text-sm text-justify h-0 opacity-0 hidden">
+                    بله، شما می‌توانید همه فیلم‌ و سریال‌های فیلیمو را داخل خود اپلیکیشن فیلیمو دانلود کنید و برای
+                    زمان‌هایی که اینترنت ندارید یا در سفر، هواپیما و قطار آ‌ن‌ها را تماشا کنید. برای دانلود هم از طریق
+                    رایانه و هم از طریق خود اپلیکیشن فیلیمو می‌توانید اقدام‌کنید. برای جزییات بیشتر می‌توانید فیلم‌های
+                    آموزشی مربوط به دانلود از طریق سایت و دانلود از طریق اپلیکیشن را تماشا کنید.
+                </p>
+            </div>
+            <div class="flex mb-5 bg-dark-150 shadow-2xl flex-col gap-10 rounded-xl max-w-2xl mx-auto h-fit overflow-hidden border border-gray-500 p-3 items-center">
+                <div class="flex justify-between w-full h-full items-center">
+                    <h1> آیا می‌توانم فیلم‌های موجود در فیلیمو را دانلود کنم؟</h1>
+                    <i data-id="2" class="fa-solid transition duration-75 fa-xmark text-orange-n-100 rotate-45"></i>
+                </div>
+                <p data-p="2" class="text-font-100 transition duration-75 text-sm text-justify h-0 opacity-0 hidden">
+                    بله، شما می‌توانید همه فیلم‌ و سریال‌های فیلیمو را داخل خود اپلیکیشن فیلیمو دانلود کنید و برای
+                    زمان‌هایی که اینترنت ندارید یا در سفر، هواپیما و قطار آ‌ن‌ها را تماشا کنید. برای دانلود هم از طریق
+                    رایانه و هم از طریق خود اپلیکیشن فیلیمو می‌توانید اقدام‌کنید. برای جزییات بیشتر می‌توانید فیلم‌های
+                    آموزشی مربوط به دانلود از طریق سایت و دانلود از طریق اپلیکیشن را تماشا کنید.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="green-gradiant h-fit">
+    <div class="max-w-7xl mx-auto py-16">
+        <h1 class="text-4xl font-bold text-center">
+            فیلیمو
+        </h1>
+        <ul class="flex md:flex-row flex-col md:gap-0 gap-5 md:px-0 px-3 justify-around mt-16 text-font-100 text-sm">
+            <li>
+                <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
+                هزاران فیلم و سریال خارجی (دوبله و زیرنویس)
+            </li>
+            <li>
+                <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
+                هزاران انیمیشن و کارتون برای کودکان
+            </li>
+            <li>
+                <i class="fa-solid fa-check bg-green-n-300 rounded-full p-0.5 text-sm inline-flex w-5 h-5 justify-center items-center text-green-500 bg-opacity-50"></i>
+                پشتیبانی 24 ساعته برای راهنمایی شما
+            </li>
+        </ul>
+        <button class="bg-green-n-300 md:w-3/12 w-8/12 py-4 mt-16 mx-auto block text-sm text-white font-bold rounded">
+            خرید اشتراک
+        </button>
+    </div>
+</footer>
 <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
 <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 <script src="../node_modules/axios/dist/axios.min.js"></script>
@@ -404,6 +703,33 @@
         draggable: false,
         allowTouchMove: false
     });
+    var swiper = new Swiper(".comment_swiper", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+            },
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
     const getImageWidth = (imageName) => {
         const regex = /(\d+)_(\d+)\.webp$/;
         return imageName?.map(url => {
@@ -492,6 +818,20 @@
             var swiper = new Swiper(".episodes", {
                 slidesPerView: 4,
                 spaceBetween: 10,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    },
+                },
             });
         }, 600)
         const parent = document.querySelector('#popular').appendChild(banner)
@@ -566,11 +906,24 @@
 
         setTimeout(() => {
             var swiper = new Swiper(".free_movies", {
-                slidesPerView: 6,
                 spaceBetween: 30,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 50,
+                    },
                 },
             });
         }, 600)
@@ -602,7 +955,7 @@
             })
             const button = document.createElement('button');
             button.textContent = 'خرید بلیت';
-            button.classList.add('border', 'border-white', 'py-2' , 'mt-10' , 'w-4/12' , 'rounded' , 'hover:bg-dark-100' , 'text-sm')
+            button.classList.add('border', 'border-white', 'py-2', 'mt-10', 'w-4/12', 'rounded', 'hover:bg-dark-100', 'text-sm')
             details.appendChild(title);
             details.appendChild(director);
             details.appendChild(ul);
@@ -613,6 +966,28 @@
         })
     }
 
+    const faqItems = document.querySelectorAll('#faqItems div');
+    faqItems.forEach((item) => {
+        let isOpen = false;
+        item.addEventListener('click', function () {
+            isOpen = !isOpen
+            const iElement = item.querySelector('i');
+            if (isOpen) {
+                iElement.classList.remove('rotate-45');
+                item.querySelector('h1').classList.add('text-orange-n-100')
+            } else {
+                iElement.classList.add('rotate-45');
+                item.querySelector('h1').classList.remove('text-orange-n-100')
+            }
+            const dataId = iElement.getAttribute('data-id');
+            const pElement = item.querySelector(`p[data-p="${dataId}"]`);
+            if (pElement && isOpen) {
+                pElement.classList.remove('h-0', 'opacity-0', 'hidden');
+            }
+            if (pElement && !isOpen)
+                pElement.classList.add('h-0', 'opacity-0', 'hidden');
+        });
+    })
 </script>
 </body>
 </html>
